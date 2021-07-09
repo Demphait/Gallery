@@ -150,26 +150,6 @@ class _SecondRouteState extends State<SecondRoute> {
                     '${widget.image.name}',
                     Icons.person_outline,
                   ),
-                  //   Row(
-                  //     children: [
-                  //       Text(
-                  //         'Author ',
-                  //         style: TextStyle(fontSize: 16, color: Colors.white),
-                  //       ),
-                  //       Padding(
-                  //         padding: EdgeInsets.only(right: 20),
-                  //         child: Text(
-                  //           image.name,
-                  //           style: TextStyle(fontSize: 16, color: Colors.white),
-                  //         ),
-                  //       ),
-                  //       Icon(
-                  //         Icons.person_outline,
-                  //         color: Colors.white,
-                  //         size: 20,
-                  //       ),
-                  //     ],
-                  //   ),
                 ],
               ),
             ),
