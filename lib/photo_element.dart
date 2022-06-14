@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:unsplash/colors.dart';
-import 'http_service.dart';
 import 'photo_model.dart';
-import 'photos.dart';
 import 'package:unsplash/second_route.dart';
 
 class PhotoElement extends StatelessWidget {
