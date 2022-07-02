@@ -16,17 +16,14 @@ class PhotoElement extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 1,
       child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey.withOpacity(0.5),
-              spreadRadius: 1,
-              blurRadius: 7,
-              offset: Offset(10, 10),
-            ),
-          ]
-        ),
+        decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.5),
+            spreadRadius: 1,
+            blurRadius: 7,
+            offset: Offset(10, 10),
+          ),
+        ]),
         clipBehavior: Clip.hardEdge,
         child: Stack(
           children: [
@@ -60,8 +57,8 @@ class PhotoElement extends StatelessWidget {
                 child: InkWell(
                   onTap: () => Navigator.push(context, SecondRoute.route(photoModel)),
                 ),
-              )
-            )
+              ),
+            ),
           ],
         ),
       ),
