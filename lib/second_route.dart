@@ -77,13 +77,15 @@ class _SecondRouteState extends State<SecondRoute> {
             aspectRatio: 1,
             child: Image.network(
               widget.image.url.full,
-              loadingBuilder: (BuildContext context, Widget child, ImageChunkEvent? loadingProgress) {
+              loadingBuilder: (BuildContext context, Widget child,
+                  ImageChunkEvent? loadingProgress) {
                 if (loadingProgress != null) {
                   return Center(
                     child: Container(
                       child: CircularProgressIndicator(
                         strokeWidth: 1,
-                        value: loadingProgress.cumulativeBytesLoaded / loadingProgress.expectedTotalBytes!,
+                        value: loadingProgress.cumulativeBytesLoaded /
+                            loadingProgress.expectedTotalBytes!,
                       ),
                       width: 40,
                       height: 40,
@@ -120,26 +122,6 @@ class _SecondRouteState extends State<SecondRoute> {
                     '${widget.image.name}',
                     Icons.person_outline,
                   ),
-                  textBuild(
-                    'Author',
-                    '${widget.image.name}',
-                    Icons.person_outline,
-                  ),
-                  textBuild(
-                    'Author',
-                    '${widget.image.name}',
-                    Icons.person_outline,
-                  ),
-                  textBuild(
-                    'Author',
-                    '${widget.image.name}',
-                    Icons.person_outline,
-                  ),
-                  textBuild(
-                    'Author',
-                    '${widget.image.name}',
-                    Icons.person_outline,
-                  ),
                 ],
               ),
             ),
@@ -148,8 +130,10 @@ class _SecondRouteState extends State<SecondRoute> {
             padding: EdgeInsets.all(16),
             child: ElevatedButton(
               style: ButtonStyle(
-                padding: MaterialStateProperty.all(EdgeInsets.symmetric(vertical: 10)),
-                shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))),
+                padding: MaterialStateProperty.all(
+                    EdgeInsets.symmetric(vertical: 10)),
+                shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20))),
                 backgroundColor: MaterialStateProperty.resolveWith(
                   (states) {
                     if (states.contains(MaterialState.pressed)) {
