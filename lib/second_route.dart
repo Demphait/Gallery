@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'colors.dart';
-import 'http_service.dart';
 import 'photo_model.dart';
-import 'photos.dart';
-import 'photo_element.dart';
-
 
 class SecondRoute extends StatefulWidget {
   final PhotoModel image;
@@ -39,7 +35,7 @@ class _SecondRouteState extends State<SecondRoute> {
               padding: const EdgeInsets.symmetric(horizontal: 10),
               alignment: Alignment.centerRight,
               child: Text(
-                strong, // + 'ahahahahahahhaahahahahahahahahahahahahahahahhahahahahahahahahahahahahaah',
+                strong,
                 style: TextStyle(fontSize: 16, color: Colors.white),
               ),
             ),
@@ -54,8 +50,8 @@ class _SecondRouteState extends State<SecondRoute> {
     );
   }
 
-    Future<void> _makeUrl(String url) async {
-      await launch(url);
+  Future<void> _makeUrl(String url) async {
+    await launch(url);
   }
 
   @override
@@ -67,7 +63,7 @@ class _SecondRouteState extends State<SecondRoute> {
           splashRadius: 20,
           icon: Icon(Icons.chevron_left_sharp),
           iconSize: 32,
-          onPressed: (){
+          onPressed: () {
             Navigator.pop(context);
           },
         ),
@@ -76,7 +72,6 @@ class _SecondRouteState extends State<SecondRoute> {
         backgroundColor: Color.fromARGB(255, 57, 0, 129),
       ),
       body: Column(
-        //mainAxisSize: MainAxisSize.min,
         children: [
           AspectRatio(
             aspectRatio: 1,
@@ -97,8 +92,6 @@ class _SecondRouteState extends State<SecondRoute> {
                 }
                 return child;
               },
-              //width: double.infinity,
-              //height: double.infinity,
               fit: BoxFit.cover,
             ),
           ),
@@ -106,13 +99,10 @@ class _SecondRouteState extends State<SecondRoute> {
             child: SingleChildScrollView(
               padding: EdgeInsets.fromLTRB(16, 8, 16, 16),
               child: Column(
-                // spacing: 20,
-                // direction: Axis.vertical,
                 children: [
                   textBuild(
                     'Resolution',
                     '${widget.image.width}x${widget.image.height}',
-                    //image.width.toString() + 'x' + image.height.toString(),
                     Icons.wallpaper_rounded,
                   ),
                   textBuild(

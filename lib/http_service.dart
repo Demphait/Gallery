@@ -1,8 +1,5 @@
 import 'dart:convert';
-import 'dart:developer';
-import 'dart:ui';
 import 'package:http/http.dart';
-import 'package:unsplash/main.dart';
 import 'package:unsplash/photo_model.dart';
 
 class HttpService {
@@ -22,7 +19,7 @@ class HttpService {
       
       // photoMap['current_user_collections'][0]['id'] // List <dynamic> 
 
-      List<PhotoModel> photos = photosMap.map((govno) => PhotoModel.fromMap(govno)).toList();
+      List<PhotoModel> photos = photosMap.map((e) => PhotoModel.fromMap(e)).toList();
        // Photo(thumb: photoMap['urls']['thumb'], id: photoMap['id']),
         //Photo.fromMap(photosMap)
        // map string dynamic
